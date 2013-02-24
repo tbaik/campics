@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require easeljs-0.5.0.min.js
+//= require iscroll.js
+//= require kokko-suite.js
+//= require tweenjs-0.3.0.min.js
 //= require bootstrap
 //= require_tree .

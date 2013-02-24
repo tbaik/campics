@@ -1,0 +1,205 @@
+﻿/* Playground - Colored Pages */
+
+.panes
+{
+    display: block;
+    position: relative;
+}
+
+/* --------------------------------------------------------
+     Home
+-----------------------------------------------------------*/
+
+#home1
+{
+    background-color: Blue;
+}
+
+#home2
+{
+    background-color: Red;
+}
+
+#home3
+{
+    background-color: Green;
+}
+
+#home4
+{
+    background-color: Black;
+}
+
+/* --------------------------------------------------------
+     Work
+-----------------------------------------------------------*/
+
+#work1
+{
+    background-color: Blue;
+}
+
+#work2
+{
+    background-color: Red;
+}
+
+#work3
+{
+    background-color: Green;
+}
+
+/* --------------------------------------------------------
+     Services
+-----------------------------------------------------------*/
+
+#services1
+{
+    background-color: Blue;
+}
+
+#services2
+{
+    background-color: Red;
+}
+
+#services3
+{
+    background-color: Green;
+}
+
+#services4
+{
+    background-color: Black;
+}
+
+#services5
+{
+    background-color: Green;
+}
+
+#services6
+{
+    background-color: Black;
+}
+
+#services7
+{
+    background-color: Green;
+}
+
+/* --------------------------------------------------------
+     Process
+-----------------------------------------------------------*/
+
+#process1
+{
+    background-color: Blue;
+}
+
+#process2
+{
+    background-color: Red;
+}
+
+#process3
+{
+    background-color: Green;
+}
+
+#process4
+{
+    background-color: Black;
+}
+
+#process5
+{
+    background-color: Green;
+}
+
+#process6
+{
+    background-color: Black;
+}
+
+#process7
+{
+    background-color: Black;
+}
+
+#process8
+{
+    background-color: Green;
+}
+
+#process9
+{
+    background-color: Black;
+}
+
+/* --------------------------------------------------------
+     About
+-----------------------------------------------------------*/
+
+#company1
+{
+    background-color: Blue;
+}
+
+#company2
+{
+    background-color: Red;
+}
+
+#company3
+{
+    background-color: Green;
+}
+
+#company4
+{
+    background-color: Black;
+}
+
+#company5
+{
+    background-color: Green;
+}
+
+/* --------------------------------------------------------
+     Careers
+-----------------------------------------------------------*/
+
+#careers1
+{
+    background-color: Blue;
+}
+
+#careers2
+{
+    background-color: Red;
+}
+
+#careers3
+{
+    background-color: Green;
+}
+
+#careers4
+{
+    background-color: Black;
+}
+
+/* --------------------------------------------------------
+     Contact
+-----------------------------------------------------------*/
+
+#contact1
+{
+    background-color: Blue;
+}
+
+#contact2
+{
+    background-color: Red;
+}

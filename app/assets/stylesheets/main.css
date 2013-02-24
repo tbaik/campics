@@ -1,0 +1,252 @@
+﻿body
+{
+    font-size: 1em;
+    font-family: "Arial", Verdana, Helvetica, Sans-Serif;
+    line-height: 1.7em;
+    color: #333;
+    background-color: #fff;
+    margin: 0 0;
+    padding: 0 0;
+    overflow:hidden;
+}
+
+ul 
+{
+    list-style-type: square;
+    padding: 0 20px;
+    margin: 0;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+
+/* --------------------------------------------------------
+     Homepage Styles
+-----------------------------------------------------------*/
+
+#container
+{   
+    position: absolute;
+    z-index: 10;
+    top: 42px;
+    left: 0px;
+    margin: 0 0;
+    font-family: arial, sans-serif;
+
+    background: #002243; /* Old browsers */
+background: -moz-linear-gradient(left, #002243 0%, #002243 49%, #990000 49%, #990000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002243), color-stop(49%,#002243), color-stop(49%,#990000), color-stop(100%,#990000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #002243 0%,#002243 49%,#990000 49%,#990000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #002243 0%,#002243 49%,#990000 49%,#990000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #002243 0%,#002243 49%,#990000 49%,#990000 100%); /* IE10+ */
+background: linear-gradient(to right, #002243 0%,#002243 49%,#990000 49%,#990000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', endColorstr='#990000',GradientType=1 ); /* IE6-9 */
+}
+
+#header-logo {
+	left: 0px;
+	right: 0px;	
+    padding: 1em;
+	z-index: 1;
+	position: fixed;
+    -moz-box-shadow: 0 0 5px 5px #000;
+    -webkit-box-shadow: 0 0 5px 5px#000;
+    box-shadow: 0 0 5px 5px #000;
+
+    background: #141414; /* Old browsers */
+    background: -moz-linear-gradient(top,  #141414 1%, #202321 51%, #141212 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#141414), color-stop(51%,#202321), color-stop(100%,#141212)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #141414 1%,#202321 51%,#141212 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #141414 1%,#202321 51%,#141212 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #141414 1%,#202321 51%,#141212 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #141414 1%,#202321 51%,#141212 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141414', endColorstr='#141212',GradientType=0 ); /* IE6-9 */
+
+
+
+}	
+		
+.hwrapper {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+    overflow: hidden;
+}
+
+#hscroll-main-wrapper
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+    overflow: hidden;
+}
+			
+.vwrapper
+{
+    position: relative;
+    display: block;
+	float: left;
+	width: 300px;
+	padding: 0px 20px;
+}
+
+.vwrapper-content
+{
+    position: absolute;
+}
+
+.school-name
+{
+    color: #FFF;
+}
+
+#vscroll1
+{
+    background-color: #002243;
+}
+
+#vscroll2
+{
+    background-color: #993333;
+}
+
+#vscroll3
+{
+    background-color: #9a000a;
+}
+
+#vscroll4
+{
+    background-color: #a51C30;
+}
+
+#vscroll5
+{
+    background-color: #002243;
+}
+
+#vscroll6
+{
+    background-color: #f26726;
+}
+
+#vscroll7
+{
+    background-color: #990000;
+}
+
+/* --------------------------------------------------------
+     Panel img
+-----------------------------------------------------------*/
+
+#image-about
+{
+    background-image: url('../img/about.jpg');
+    width: 300px;
+    height: 900px;
+}
+                         
+#image-work
+{
+    background-image: url('../img/work.jpg');
+    width: 300px;
+    height: 675px;
+}
+
+#image-services
+{
+    background-image: url('../img/services.jpg');
+    width: 300px;
+    height: 1575px;
+}
+
+#image-process
+{
+    background-image: url('../img/process.jpg');
+    width: 300px;
+    height: 2025px;
+}
+
+#image-company
+{
+    background-image: url('../img/company.jpg');
+    width: 300px;
+    height: 1125px;
+}
+
+#image-careers
+{
+    background-image: url('../img/careers.jpg');
+    width: 300px;
+    height: 900px;
+}
+
+#image-contact
+{
+    background-image: url('../img/contact.jpg');
+    width: 300px;
+    height: 450px;
+}
+
+.image-links
+{
+    box-shadow: 0px 5px 10px 3px #000;
+}
+
+.image-links div
+{
+    width: 300px;
+    height: 225px;
+}
+
+.image-links a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------------------------------------
+     Content Pages
+-----------------------------------------------------------*/
+
+#site-container
+{   
+    visibility: hidden;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 0 0;
+}
+
+#hscroll-main-wrapper
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+.section-container
+{
+    position: relative;
+    display: block;
+	float: left;
+	padding: 0px;
+}
+
+.section
+{
+    position: absolute;
+    padding-top: 0px;
+    width: 100%;
+}
