@@ -10,7 +10,7 @@
 
 <% @pics.each do |pic| %>
   <tr>
-    <td><%= image_tag pic.image(:medium) %></td>
+    <td><%= link_to (image_tag pic.image(:medium)), pic %></td>
     <td><%= pic.description %></td>
     <td><%= link_to 'Show', pic %></td>
     <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
