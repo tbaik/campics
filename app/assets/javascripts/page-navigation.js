@@ -6,7 +6,7 @@
         };
 
     
-        $('a')
+        $('#image-about')
         .mousedown(function() {
             $(window).mousemove(function() {
                 isDragging = true;

@@ -8,6 +8,8 @@ WebJamTeam8::Application.routes.draw do
 
   root :to => 'pages#home'
 
+  get 'newpic' => 'pics#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
