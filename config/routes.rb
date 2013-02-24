@@ -1,4 +1,7 @@
 WebJamTeam8::Application.routes.draw do
+  resources :pics
+
+
   devise_for :users
 
   get 'about' => 'pages#about'

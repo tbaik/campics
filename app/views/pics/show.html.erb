@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+			<%= image_tag @pic.image %>
+			<p>
+			  <%= @pic.description %>
+			</p>
+			<%= link_to 'Edit', edit_pic_path(@pic) %> |
+			<%= link_to 'Back', pics_path %>	
+		</div>
+	</div>
+</div>
+
+
