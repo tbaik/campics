@@ -6,6 +6,10 @@
         $('.hwrapper').css({
             width: vwrapWidth + 'px'
         });
+
+        $('.college-text').css({
+            width: vwrapWidth + 'px'
+        })
     },
 
     setWindowResize: function () {
@@ -28,7 +32,7 @@
             }),
 
             $('#hscroll-main-wrapper').css({
-                width: 10 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
+                width: 7 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
             }),
 
             $('.section-container').css({
@@ -47,7 +51,15 @@
             }),
 
             $('.vwrapper-content').css({
-                paddingTop: 0.30 * KokkoSuite.utils.getWindowAxisLength('height') + 'px'
+                paddingTop: 0.20 * KokkoSuite.utils.getWindowAxisLength('height') + 'px'
+            }),
+
+            $('.navbar').css({
+                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
+            }),
+
+            $('.panes img').css({
+                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
             })
 
         }, 'resizeHomePage');

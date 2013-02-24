@@ -58,113 +58,84 @@ ul.content-menu {
     bottom:0; 
     width:100%; 
     height: 25px;
-    /* 
-        About:      #8fc927
-        Work:       #ba0a44
-        Services:   #7932b4
-        Process:    #308cb3
-        Company:    #d0300c
-        Careers:    #ffc835
-        Contact:    #ffc835
-    */
 }
 
-#bottom-border-about
+#bottom-border-uci
 {
+    position:absolute; 
     float: left;
     background-color: #8fc927;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-work
+#bottom-border-stanford
 {
+    position:absolute; 
     float: left;
     background-color: #ba0a44;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-services
+#bottom-border-mit
 {
+    position:absolute; 
     float: left;
     background-color: #7932b4;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-process
+#bottom-border-cit
 {
+    position:absolute; 
     float: left;
     background-color: #308cb3;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-company
+#bottom-border-yale
 {
+    position:absolute; 
     float: left;
     background-color: #d0300c;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-careers
+#bottom-border-usc
 {
+    position:absolute; 
     float: left;
     background-color: #ffc835;
-    width: 14.2857%;
     height: 100%;
 }
 
-#bottom-border-contact
+#bottom-border-dartmouth
 {
+    position:absolute; 
     float: left;
     background-color: #711f10;
-    width: 14.2857%;
     height: 100%;
 }
 
-
-/* --------------------------------------------------------
-   Media Queries
------------------------------------------------------------*/
-
-@media only screen and (max-width: 1024px)
+#bottom-border-ucla
 {
-    #content-menu-left {
-        float: left;
-        width: 260px;
-    }
-
-    #codazen-logo {
-        background-size: contain;
-        height: 40px;
-        width: 240px;
-        margin: 8px 0 0 1em;
-    }
+    position:absolute; 
+    float: left;
+    background-color: #d0300c;
+    height: 100%;
 }
 
-@media only screen and (max-width: 960px)
+#bottom-border-princeton
 {
-    #content-menu-left {
-        width: 0%;
-    }
-    
-    #content-menu-right {
-        float: right;
-    }
-
-    .menu-link {
-        display: none;
-    }
+    position:absolute; 
+    float: left;
+    background-color: #ffc835;
+    height: 100%;
 }
 
-
-@media only screen and (max-width: 480px) 
+#bottom-border-harvard
 {
-    #codazen-logo {
-        width: 200px;
-        margin-left: 20px;
-    }
+    position:absolute; 
+    float: left;
+    background-color: #711f10;
+    height: 100%;
 }

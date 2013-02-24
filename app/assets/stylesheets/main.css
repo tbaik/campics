@@ -36,15 +36,23 @@ a
     margin: 0 0;
     font-family: arial, sans-serif;
 
-    background: #002243; /* Old browsers */
-background: -moz-linear-gradient(left,  #002243 0%, #002243 50%, #993333 50%, #993333 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002243), color-stop(50%,#002243), color-stop(50%,#993333), color-stop(100%,#993333)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  #002243 0%,#002243 50%,#993333 50%,#993333 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  #002243 0%,#002243 50%,#993333 50%,#993333 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  #002243 0%,#002243 50%,#993333 50%,#993333 100%); /* IE10+ */
-background: linear-gradient(to right,  #002243 0%,#002243 50%,#993333 50%,#993333 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', endColorstr='#993333',GradientType=1 ); /* IE6-9 */
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
 
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #383737), color-stop(1, #000000));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #383737 0%, #000000 100%);
 }
 
 #header-logo {
@@ -96,116 +104,249 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', end
 	float: left;
 	width: 300px;
 	padding: 0px 20px;
+
 }
 
 .vwrapper-content
 {
     position: absolute;
+    padding-bottom: 45px;
     width: 300px;
 }
 
 #vscroll1
 {
-    background-color: #002243;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #006BD4 0%, #002243 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #006BD4 0%, #002243 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #006BD4 0%, #002243 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #006BD4), color-stop(1, #002243));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #006BD4 0%, #002243 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #006BD4 0%, #002243 100%);
 }
 
-#vscroll2
-{
-    background-color: #006633;
-}
-
-#vscroll3
-{
-    background-color: #a51C30;
-}
-
-#vscroll4
-{
-    background-color: #f26726;
-}
-
-#vscroll5
-{
-    background-color: #0F4D92;
-}
-
-#vscroll6
-{
-    background-color: #9a000a;
-}
-
+/* Dartmouth - Green */
 #vscroll7
 {
-    background-color: #FFCC00;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #00FF80 0%, #006633 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #00FF80 0%, #006633 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #00FF80 0%, #006633 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #00FF80), color-stop(1, #006633));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #00FF80 0%, #006633 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #00FF80 0%, #006633 100%);
 }
 
-#vscroll8
-{
-    background-color: #002243;
-}
-
-#vscroll9
-{
-    background-color: #f4802d;
-}
-
+/* Harvard - Red */
 #vscroll10
 {
-    background-color: #993333;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FF596A 0%, #A51C30 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FF596A 0%, #A51C30 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FF596A 0%, #A51C30 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FF596A), color-stop(1, #A51C30));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FF596A 0%, #A51C30 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FF596A 0%, #A51C30 100%);
+}
+
+/* CIT - Orange */
+#vscroll4
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FFBA91 0%, #F26726 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FFBA91 0%, #F26726 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FFBA91 0%, #F26726 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFBA91), color-stop(1, #F26726));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFBA91 0%, #F26726 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FFBA91 0%, #F26726 100%);
+}
+
+/* Yale - Blue */
+#vscroll5
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #73A2FF 0%, #0F4D92 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #73A2FF 0%, #0F4D92 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #73A2FF 0%, #0F4D92 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #73A2FF), color-stop(1, #0F4D92));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #73A2FF 0%, #0F4D92 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #73A2FF 0%, #0F4D92 100%);
+}
+
+/* Stanford - Red */
+#vscroll2
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FC6060 0%, #9A000A 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FC6060 0%, #9A000A 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FC6060 0%, #9A000A 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FC6060), color-stop(1, #9A000A));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FC6060 0%, #9A000A 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FC6060 0%, #9A000A 100%);
+}
+
+/* USC - Yellow */
+#vscroll6
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FFF8DE 0%, #FFCC00 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FFF8DE 0%, #FFCC00 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FFF8DE 0%, #FFCC00 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFF8DE), color-stop(1, #FFCC00));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFF8DE 0%, #FFCC00 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FFF8DE 0%, #FFCC00 100%);
+}
+
+/* UCLA - Blue */
+#vscroll8
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #0081FF 0%, #002243 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #0081FF 0%, #002243 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #0081FF 0%, #002243 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #0081FF), color-stop(1, #002243));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #0081FF 0%, #002243 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #0081FF 0%, #002243 100%);
+}
+
+/* Princeton - Orange */
+#vscroll9
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FAC78C 0%, #F4802D 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FAC78C 0%, #F4802D 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FAC78C 0%, #F4802D 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FAC78C), color-stop(1, #F4802D));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FAC78C 0%, #F4802D 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FAC78C 0%, #F4802D 100%);
+}
+
+/* MIT - Salmon */
+#vscroll3
+{
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FF8787 0%, #993333 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FF8787 0%, #993333 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FF8787 0%, #993333 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FF8787), color-stop(1, #993333));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FF8787 0%, #993333 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #FF8787 0%, #993333 100%);
+}
+
+/* --------------------------------------------------------
+     Navigation Bar
+-----------------------------------------------------------*/
+
+.navbar
+{
+    z-index: 50;
+    box-shadow: 0px 0px 5px 3px #000;
+    position: absolute;
 }
 
 /* --------------------------------------------------------
      Panel img
 -----------------------------------------------------------*/
-
-#image-about
-{
-    background-image: url('../img/about.jpg');
-    width: 300px;
-    height: 900px;
-}
-                         
-#image-work
-{
-    background-image: url('../img/work.jpg');
-    width: 300px;
-    height: 675px;
-}
-
-#image-services
-{
-    background-image: url('../img/services.jpg');
-    width: 300px;
-    height: 1575px;
-}
-
-#image-process
-{
-    background-image: url('../img/process.jpg');
-    width: 300px;
-    height: 2025px;
-}
-
-#image-company
-{
-    background-image: url('../img/company.jpg');
-    width: 300px;
-    height: 1125px;
-}
-
-#image-careers
-{
-    background-image: url('../img/careers.jpg');
-    width: 300px;
-    height: 900px;
-}
-
-#image-contact
-{
-    background-image: url('../img/contact.jpg');
-    width: 300px;
-    height: 450px;
-}
 
 .image-links div
 {
@@ -219,7 +360,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', end
     display: block;
     width: 300px;
     height: 225px;
-    box-shadow: 0px 5px 10px 3px #000;
+    /*box-shadow: 0px 5px 10px 3px #000;*/
 }
 
 .image-links a
@@ -234,6 +375,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', end
 {
     position: absolute;
     z-index: 1;
+}
+
+.college-text img
+{
+    position: relative;
+    height: 225px;
+    float: left;
     margin: 0px 20px;
     width: 300px;
 }
@@ -245,7 +393,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002243', end
 #site-container
 {   
     visibility: hidden;
-    position: relative;
+    position: absolute;
     top: 0px;
     left: 0px;
     margin: 0 0;
