@@ -341,7 +341,7 @@ a
 {
     z-index: 50;
     box-shadow: 0px 0px 5px 3px #000;
-    position: absolute;
+    position: relative;
 }
 
 /* --------------------------------------------------------
@@ -397,6 +397,24 @@ a
     top: 0px;
     left: 0px;
     margin: 0 0;
+
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #383737), color-stop(1, #000000));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #383737 0%, #000000 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(circle farthest-corner at center, #383737 0%, #000000 100%);
 }
 
 #hscroll-main-wrapper

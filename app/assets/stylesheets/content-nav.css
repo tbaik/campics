@@ -61,81 +61,81 @@ ul.content-menu {
 }
 
 #bottom-border-uci
-{
-    position:absolute; 
+{ 
     float: left;
-    background-color: #8fc927;
+    background-color: #002243;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-stanford
 {
-    position:absolute; 
     float: left;
-    background-color: #ba0a44;
+    background-color: #9a000a;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-mit
-{
-    position:absolute; 
+{ 
     float: left;
-    background-color: #7932b4;
+    background-color: #993333;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-cit
 {
-    position:absolute; 
     float: left;
     background-color: #308cb3;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-yale
 {
-    position:absolute; 
     float: left;
-    background-color: #d0300c;
+    background-color: #f26726;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-usc
 {
-    position:absolute; 
     float: left;
-    background-color: #ffc835;
+    background-color: #FFCC00 ;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-dartmouth
 {
-    position:absolute; 
     float: left;
-    background-color: #711f10;
+    background-color: #006633;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-ucla
 {
-    position:absolute; 
     float: left;
-    background-color: #d0300c;
+    background-color: #002243;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-princeton
 {
-    position:absolute; 
     float: left;
-    background-color: #ffc835;
+    background-color: #f4802d;
+    width: 10%;
     height: 100%;
 }
 
 #bottom-border-harvard
 {
-    position:absolute; 
     float: left;
-    background-color: #711f10;
+    background-color: #a51C30;
+    width: 10%;
     height: 100%;
 }

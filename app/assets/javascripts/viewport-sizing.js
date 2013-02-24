@@ -32,7 +32,7 @@
             }),
 
             $('#hscroll-main-wrapper').css({
-                width: 7 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
+                width: 10 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
             }),
 
             $('.section-container').css({
