@@ -1,7 +1,7 @@
 ﻿var viewportSizing =
 {
     setHomePageWidth: function () {
-        vwrapWidth = 7 * ($('.vwrapper').width() + parseInt($('.vwrapper').css('padding-left')) + parseInt($('.vwrapper').css('padding-right')));
+        vwrapWidth = 10 * ($('.vwrapper').width() + parseInt($('.vwrapper').css('padding-left')) + parseInt($('.vwrapper').css('padding-right')));
 
         $('.hwrapper').css({
             width: vwrapWidth + 'px'
@@ -28,7 +28,7 @@
             }),
 
             $('#hscroll-main-wrapper').css({
-                width: 7 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
+                width: 10 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
             }),
 
             $('.section-container').css({
