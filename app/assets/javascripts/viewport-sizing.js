@@ -15,7 +15,7 @@
     setWindowResize: function () {
 
         var bottomBorderHeight = $('#bottom-border').height();
-        var topHeaderHeight = $('#navig').height();
+        var topHeaderHeight = 42;
 
         KokkoSuite.utils.Sizing.addFunction(function () {
             $('.vwrapper').css({
@@ -32,18 +32,22 @@
             }),
 
             $('#hscroll-main-wrapper').css({
-                width: 10 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px'
+                width: 10 * (KokkoSuite.utils.getWindowAxisLength('width')) + 'px',
+                height: KokkoSuite.utils.getWindowAxisLength('height') + 'px'
             }),
 
             $('.section-container').css({
-                height: (KokkoSuite.utils.getWindowAxisLength('height') - topHeaderHeight) + 'px',
-                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px',
-                bottom: bottomBorderHeight + 'px'
+                height: (KokkoSuite.utils.getWindowAxisLength('height') - bottomBorderHeight) + 'px',
+                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
             }),
 
             $('.panes').css({
-                height: (KokkoSuite.utils.getWindowAxisLength('height') - topHeaderHeight) + 'px'
+                height: (KokkoSuite.utils.getWindowAxisLength('height') - bottomBorderHeight) + 'px'
             }),
+
+            // $('.panes img').css({
+            //     height: (KokkoSuite.utils.getWindowAxisLength('height') - bottomBorderHeight) + 'px'
+            // }),
 
             $('#header-logo').css({
                 width: KokkoSuite.utils.getWindowAxisLength('width') + 'px',
@@ -58,10 +62,18 @@
                 width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
             }),
 
-            $('.panes img').css({
-                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
-            })
+            $('.section img').css({
+                maxWidth: 0.7*KokkoSuite.utils.getWindowAxisLength('width') + 'px',
+                maxHeight: 0.4*KokkoSuite.utils.getWindowAxisLength('width') + 'px'
+            }),
 
+            setTimeout(function() {$('.section img').each(function() {
+                var h = $(this).height();
+                var w = $(this).width();
+
+                this.style.marginTop = -Math.round((h + 25)/2) + 'px';
+                this.style.marginLeft = -Math.round(w/2) + 'px';
+            })}, 100)
         }, 'resizeHomePage');
 
         KokkoSuite.appInit();

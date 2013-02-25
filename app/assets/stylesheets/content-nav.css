@@ -1,57 +1,8 @@
-﻿/* --------------------------------------------------------
-     Content Top Navigation
------------------------------------------------------------*/
-
-.content-menu-left {
-    float: left;
-    width: 340px;
-}
-
-.codazen-logo {
-    background: url('../images/codazen-menu-logo.png') no-repeat center center;
-    background-size: contain;
-    height: 40px;
-    width: 320px;
-    margin: 8px 0 0 1em;
-}
-
-.content-menu-right {
-    float: right;
-}
-
-.content-menu-container {
-    background-color: #2c2c2c;
-}
-
-.content-menu ul, .content-menu li, .content-menu a,.content-menu li a {
-    font-family: 'PT Sans';
-    line-height: 1.4em;
-    color: #ffffff;
-    text-shadow: 2px 2px #000000;
-}
-
-.content-navigation {
-    background-color: #2c2c2c;
-    height: 30px;
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    position: absolute;
-}
-
-ul.content-menu {
-    width: 100%;
-}
-
-.content-menu li {
-    list-style: none;
-    float: left;
-    padding: 1em;
-}
-
+﻿
 /* Bottom Border */
 
-#bottom-border {
+#bottom-border
+{
     left:0;
     position:absolute; 
     text-align:center; 
@@ -60,12 +11,26 @@ ul.content-menu {
     height: 25px;
 }
 
+#bottom-border span
+{
+    display: block;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0 1px 0 #5e5e5e;
+}
+
 #bottom-border-uci
 { 
     float: left;
     background-color: #002243;
     width: 10%;
     height: 100%;
+}
+
+#bottom-border-uci span
+{
+    color: #ffde6c;
 }
 
 #bottom-border-stanford
@@ -84,10 +49,15 @@ ul.content-menu {
     height: 100%;
 }
 
+#bottom-border-mit span
+{
+    color: #666666;
+}
+
 #bottom-border-cit
 {
     float: left;
-    background-color: #308cb3;
+    background-color: #f26726;
     width: 10%;
     height: 100%;
 }
@@ -95,7 +65,7 @@ ul.content-menu {
 #bottom-border-yale
 {
     float: left;
-    background-color: #f26726;
+    background-color: #0F4D92;
     width: 10%;
     height: 100%;
 }
@@ -106,6 +76,11 @@ ul.content-menu {
     background-color: #FFCC00 ;
     width: 10%;
     height: 100%;
+}
+
+#bottom-border-usc span
+{
+    color: #990000;
 }
 
 #bottom-border-dartmouth
@@ -124,6 +99,11 @@ ul.content-menu {
     height: 100%;
 }
 
+#bottom-border-ucla span
+{
+    color: #ffde6c;
+}
+
 #bottom-border-princeton
 {
     float: left;
@@ -131,6 +111,12 @@ ul.content-menu {
     width: 10%;
     height: 100%;
 }
+
+#bottom-border-princeton span
+{
+    color: #221f20;
+}
+
 
 #bottom-border-harvard
 {

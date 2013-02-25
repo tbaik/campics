@@ -244,7 +244,7 @@
         $('#site-container').css("visibility", "visible");
 
         scrollPage();
-
+    
         // Fade the main page out and then turning the main page display off
         var containerTween = createjs.Tween.get(container);
 
@@ -257,7 +257,18 @@
         }, 1500, createjs.Ease.sineOut).call(function () {
             container.element.css('visibility', 'hidden');
         });  
+
+        centerImages();
     };
 
+    var centerImages = function(){
+        setTimeout(function() {$('.section img').each(function() {
+                var h = $(this).height();
+                var w = $(this).width();
+
+                this.style.marginTop = -Math.round((h + 25)/2) + 'px';
+                this.style.marginLeft = -Math.round(w/2) + 'px';
+            })}, 100)
+    };
 
 });
