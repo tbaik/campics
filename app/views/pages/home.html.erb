@@ -502,25 +502,53 @@
                 <div class="section-container" id="vcscroll1">
                     <div class="section">
                         <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id) %>
+                                    <%= image_tag(Pic.find(Pic.last.id).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-1).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-1) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-1).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-2).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-2) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-2).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                          <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-3).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-3) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-3).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                          <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-4).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-4) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-4).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                          <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-5).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-5) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-5).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                          <div class="panes"> 
-                            <%= image_tag(Pic.find(Pic.last.id-6).image, :alt => "UCI") %>
+                             <% if Pic.exists?(Pic.last.id-6) %>
+                                    <%= image_tag(Pic.find(Pic.last.id-6).image, :alt => "UCI") %>
+                                    <% else %>
+                                    <%= "Please upload more pictures!" %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
