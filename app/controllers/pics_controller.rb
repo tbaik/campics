@@ -2,7 +2,7 @@ class PicsController < ApplicationController
   # GET /pics
   # GET /pics.json
   def index
-    @pics = Pic.all
+    @pics = Pic.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb
