@@ -1,11 +1,7 @@
-<h1>Listing pics</h1>
+<h1>List of Pics</h1>
 
 <table class ="table table-striped">
   <tr>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 <% @pics.each do |pic| %>
   <tr>
@@ -13,7 +9,7 @@
     <td><%= pic.description %></td>
     <td><%= link_to 'Show', pic %></td>
     <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
-    <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
