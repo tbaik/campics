@@ -16,7 +16,6 @@
 
         var bottomBorderHeight = $('#bottom-border').height();
         var topHeaderHeight = 40;
-        var scrollHeight = $('.user-container').scrollTop();
 
         KokkoSuite.utils.Sizing.addFunction(function () {
             $('.vwrapper').css({

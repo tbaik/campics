@@ -495,21 +495,4 @@
 
     },100);
 
-    $('.nav.pull-right li:first a').click(function(){
-        $('body').css({
-            overflow: 'visible'
-        });
-    });
-
-    $('a').on("click", function(){
-        setTimeout(function(){
-            if(!(window.location.pathname.localeCompare("/pics")))
-            {
-                console.log('hello');
-                $('body').css({
-                    overflow: 'visible'
-                });
-            }
-        }, 200);
-    });
 });
