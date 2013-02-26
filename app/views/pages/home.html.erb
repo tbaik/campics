@@ -17,11 +17,19 @@
                 <div class="vwrapper" id="vscroll1">
                     <div class="vwrapper-content">
                         <div class="image-links">
-                            <% if Pic.exists? %>
+                           <% School.all.each do |sch| %>
+                            <% if sch.name == "UCI" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                                 <div> 
                                     <a href="#uci1">
-                                        <% if Pic.exists?(Pic.last.id) %>
-                                        <%= image_tag(Pic.find(Pic.last.id).image, :alt => "UCI") %>
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "UCI") %>
+                                    <% else %>
+                                        <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                         <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
                                         <% end %>
@@ -29,8 +37,12 @@
                                 </div>
                                 <div> 
                                     <a href="#uci2">
-                                       <% if Pic.exists?(Pic.last.id-1) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-1).image, :alt => "UCI") %>
+                                      <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                          <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
                                         <% end %>
@@ -38,17 +50,25 @@
                                 </div>
                                 <div> 
                                     <a href="#uci3">
-                                      <% if Pic.exists?(Pic.last.id-2) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-2).image, :alt => "UCI") %>
-                                        <% else %>
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "UCI") %>
+                                    <% else %>
                                          <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
                                         <% end %>
+                                        <% else %>
+                                         <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
+                                        <% end %> 
                                     </a>
                                 </div>
                                  <div> 
                                     <a href="#uci4">
-                                       <% if Pic.exists?(Pic.last.id-3) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-3).image, :alt => "UCI") %>
+                                      <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                          <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
                                         <% end %>
@@ -56,8 +76,12 @@
                                 </div>
                                  <div> 
                                    <a href="#uci5">
-                                        <% if Pic.exists?(Pic.last.id-4) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-4).image, :alt => "UCI") %>
+                                   <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                          <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
                                         <% end %>
@@ -65,8 +89,12 @@
                                 </div>
                                  <div> 
                                     <a href="#uci6">
-                                        <% if Pic.exists?(Pic.last.id-5) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-5).image, :alt => "UCI") %>
+                                        <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "UCI") %>
+                                    <% else %>
+                                        <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                         <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
                                         <% end %>
@@ -74,94 +102,130 @@
                                 </div>
                                  <div> 
                                     <a href="#uci7">
-                                        <% if Pic.exists?(Pic.last.id-6) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-6).image, :alt => "UCI") %>
+                                      <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                          <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
                                         <% end %>
                                     </a>
                                 </div>
-                          <% else %>
-                                <div> 
-                                    <a href="#uci1">
-                                        <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                <div> 
-                                    <a href="#uci2">
-                                        <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                <div> 
-                                    <a href="#uci3">
-                                        <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                 <div> 
-                                    <a href="#uci4">
-                                        <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                 <div> 
-                                   <a href="#uci5">
-                                        <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                 <div> 
-                                    <a href="#uci6">
-                                        <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                                 <div> 
-                                    <a href="#uci7">
-                                        <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
-                                    </a>
-                                </div>
-                            <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="vwrapper" id="vscroll2">
                     <div class="vwrapper-content">
                         <div class="image-links">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "STANFORD" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#stanford1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-1.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-1.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#stanford2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-2.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-2.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#stanford3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-3.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                     <% else %>
+                                    <%= image_tag("stanford/stanford-3.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                              <div> 
                                 <a href="#stanford4">
+                                   <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-4.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-4.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                              <div> 
                                <a href="#stanford5">
+                                   <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-5.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-5.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                              <div> 
                                 <a href="#stanford6">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-6.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-6.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                              <div> 
                                 <a href="#stanford7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-7.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-7.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#stanford8">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Stanford") %>
+                                    <% else %>
                                     <%= image_tag("stanford/stanford-8.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-8.jpg", :alt => "Stanford") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -170,19 +234,48 @@
                 <div class="vwrapper" id="vscroll3">
                     <div class="vwrapper-content">
                        <div class="image-links">
+                          <% School.all.each do |sch| %>
+                            <% if sch.name == "MIT" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#mit1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "MIT") %>
+                                    <% else %>
                                     <%= image_tag("mit/mit-1.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-1.jpg", :alt => "MIT") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#mit2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "MIT") %>
+                                    <% else %>
                                     <%= image_tag("mit/mit-2.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-2.jpg", :alt => "MIT") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#mit3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "MIT") %>
+                                    <% else %>
                                     <%= image_tag("mit/mit-3.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-3.jpg", :alt => "MIT") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -191,44 +284,113 @@
 			    <div class="vwrapper" id="vscroll4">
                     <div class="vwrapper-content">
                         <div class="image-links" id="image-process">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "CIT" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#cit1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-1.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-1.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-2.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-2.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-3.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-3.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-4.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-4.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit5">
+                                   <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-5.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-5.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit6">
+                                   <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-6.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-6.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-7.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-7.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#cit8">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "CIT") %>
+                                    <% else %>
                                     <%= image_tag("cit/cit-8.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-8.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -237,49 +399,126 @@
 			    <div class="vwrapper" id="vscroll5">
                     <div class="vwrapper-content">
                         <div class="image-links" id="image-company">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "YALE" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#yale1">
+                                      <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-1.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-1.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-2.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-2.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-3.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-3.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.-3).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-4.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-4.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale5">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-5.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-5.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale6">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-6.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-6.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-7.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-7.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale8">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-8.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-8.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#yale9">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Yale") %>
+                                    <% else %>
                                     <%= image_tag("yale/yale-9.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-9.jpg", :alt => "Yale") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -288,39 +527,100 @@
 			    <div class="vwrapper" id="vscroll6">
                     <div class="vwrapper-content">
                         <div class="image-links" id="image-careers">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "USC" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#usc1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-1.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-1.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-2.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-2.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-3.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-3.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-4.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-4.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc5">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-5.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-5.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc6">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-6.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-6.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#usc7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "USC") %>
+                                    <% else %>
                                     <%= image_tag("usc/usc-7.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-7.jpg", :alt => "USC") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -329,54 +629,139 @@
 			    <div class="vwrapper" id="vscroll7">
                     <div class="vwrapper-content">
                         <div class="image-links" id="image-contact">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "DARTMOUTH" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#dartmouth1">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-1.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-1.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-2.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-2.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-3.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-3.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-4.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-4.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth5">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-5.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-5.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth6">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-6.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-6.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-7.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-7.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth8">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-8.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-8.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth9">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-9.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-9.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#dartmouth10">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-9) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-9).image, :alt => "Dartmouth") %>
+                                    <% else %>
                                     <%= image_tag("dartmouth/dartmouth-10.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-10.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -385,54 +770,139 @@
                 <div class="vwrapper" id="vscroll8">
                     <div class="vwrapper-content">
                         <div class="image-links">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "UCLA" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                              <div> 
                                 <a href="#ucla1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-1.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-1.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla2">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-2.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-2.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla3">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-3.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-3.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla4">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-4.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-4.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla5">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-5.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-5.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla6">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-6.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-6.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla7">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-7.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-7.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla8">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-8.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-8.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla9">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-9.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-9.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#ucla10">
+                                     <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-9) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-9).image, :alt => "UCLA") %>
+                                    <% else %>
                                     <%= image_tag("ucla/ucla-10.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-10.jpg", :alt => "UCLA") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -441,39 +911,100 @@
                 <div class="vwrapper" id="vscroll9">
                     <div class="vwrapper-content">
                         <div class="image-links">
+                              <% School.all.each do |sch| %>
+                            <% if sch.name == "PRINCETON" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                             <div> 
                                 <a href="#princeton1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-1.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-1.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeton2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-2.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-2.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeton3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-3.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-3.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeton4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-4.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-4.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeton5">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-5.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-5.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeto6n">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-6.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-6.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#princeton7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Princeton") %>
+                                    <% else %>
                                     <%= image_tag("princeton/princeton-7.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-7.jpg", :alt => "Princeton") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -482,49 +1013,132 @@
                 <div class="vwrapper" id="vscroll10">
                     <div class="vwrapper-content">
                         <div class="image-links">
+                        <% School.all.each do |sch| %>
+                          <% if sch.name == "HARVARD" %>
+                              <% @sid = sch.id %>
+                          <% end %>
+                        <% end %>
                             <div> 
                                 <a href="#harvard1">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Harvard") %>
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-1.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-1.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard2">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Harvard") %>
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-2.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-2.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard3">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Harvard") %>
+                                     
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-3.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-3.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard4">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Harvard") %>
+                                    
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-4.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                     <% else %>
+                                    <%= image_tag("harvard/harvard-4.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard5">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Harvard") %>
+                                   
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-5.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                             <% else %>
+                                    <%= image_tag("harvard/harvard-5.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard6">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Harvard") %>
+                           
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-6.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                         <% else %>
+                                    <%= image_tag("harvard/harvard-6.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard7">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Harvard") %>
+                            
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-7.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-7.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard8">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Harvard") %>
+                          
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-8.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-8.jpg", :alt => "Harvard") %>
+                                    <% end %> 
                                 </a>
                             </div>
                             <div> 
                                 <a href="#harvard9">
+                                    <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Harvard") %>
+                                    <% else %>
                                     <%= image_tag("harvard/harvard-9.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-9.jpg", :alt => "Harvard") %>
+                                    <% end %>
                                 </a>
                             </div>
                         </div>
@@ -538,328 +1152,960 @@
         <div id="hscroll-main">
             <div id="hscroll-main-wrapper">
                 <div class="section-container" id="vcscroll1">
+                     <% School.all.each do |sch| %>
+                            <% if sch.name == "UCI" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
-                        <% if Pic.exists? %> 
                             <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id) %>
-                                        <%= image_tag(Pic.find(Pic.last.id).image, :alt => "UCI") %>
+                                 <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "UCI") %>
+                                    <% else %>
+                                        <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
-                                          <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
+                                        <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
                             <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-1) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-1).image, :alt => "UCI") %>
+                                 <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
-                                        <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
+                                         <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
                             <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-2) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-2).image, :alt => "UCI") %>
+                                  <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
-                                          <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
+                                         <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
+                                        <% end %> 
+                            </div>
+                             <div class="panes"> 
+                                 <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
+                                        <% end %>
+                                        <% else %>
+                                         <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
                              <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-3) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-3).image, :alt => "UCI") %>
-                                        <% else %>
-                                        <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
+                                <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
                                         <% end %>
-                            </div>
-                             <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-4) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-4).image, :alt => "UCI") %>
                                         <% else %>
                                          <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
                              <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-5) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-5).image, :alt => "UCI") %>
+                                 <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "UCI") %>
+                                    <% else %>
+                                        <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
                                         <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
                              <div class="panes"> 
-                                 <% if Pic.exists?(Pic.last.id-6) %>
-                                        <%= image_tag(Pic.find(Pic.last.id-6).image, :alt => "UCI") %>
+                                 <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "UCI") %>
+                                    <% else %>
+                                         <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
+                                        <% end %>
                                         <% else %>
-                                          <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
+                                         <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
                                         <% end %>
                             </div>
-                        <% else %>
-                             <div class="panes"> 
-                                 <%= image_tag("uci/UCI-2.jpg", :alt => "UCI") %>
-                            </div>
-                            <div class="panes"> 
-                                <%= image_tag("uci/UCI-3.jpg", :alt => "UCI") %>
-                            </div>
-                            <div class="panes"> 
-                                <%= image_tag("uci/UCI-4.jpg", :alt => "UCI") %>
-                            </div>
-                             <div class="panes"> 
-                                <%= image_tag("uci/UCI-5.jpg", :alt => "UCI") %>
-                            </div>
-                             <div class="panes"> 
-                                <%= image_tag("uci/UCI-6.jpg", :alt => "UCI") %>
-                            </div>
-                             <div class="panes"> 
-                                <%= image_tag("uci/UCI-7.jpg", :alt => "UCI") %>
-                            </div>
-                             <div class="panes"> 
-                                <%= image_tag("uci/UCI-8.jpg", :alt => "UCI") %>
-                            </div>
-                        <% end %>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll2">
+                       <% School.all.each do |sch| %>
+                            <% if sch.name == "STANFORD" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                     
                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-1.jpg", :alt => "stanford") %>
-                        </div>
-                        <div class="panes"> 
-                           <%= image_tag("stanford/stanford-2.jpg", :alt => "stanford") %>
-                        </div>
-                        <div class="panes"> 
-                            <%= image_tag("stanford/stanford-3.jpg", :alt => "stanford") %>
-                        </div>
-                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-4.jpg", :alt => "stanford") %>
-                        </div>
-                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-5.jpg", :alt => "stanford") %>
-                        </div>
-                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-6.jpg", :alt => "stanford") %>
-                        </div>
-                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-7.jpg", :alt => "stanford") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-1.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-1.jpg", :alt => "Stanford") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("stanford/stanford-8.jpg", :alt => "stanford") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-2.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-2.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                        </div>
+                        <div class="panes"> 
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-3.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                     <% else %>
+                                    <%= image_tag("stanford/stanford-3.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                </div>
+                         <div class="panes"> 
+                          <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-4.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-4.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                        </div>
+                         <div class="panes"> 
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-5.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-5.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                        </div>
+                         <div class="panes"> 
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-6.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-6.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                        </div>
+                         <div class="panes"> 
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-7.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-7.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                        </div>
+                        <div class="panes"> 
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Stanford") %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-8.jpg", :alt => "Stanford") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("stanford/stanford-8.jpg", :alt => "Stanford") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll3">
+
+                        <% School.all.each do |sch| %>
+                            <% if sch.name == "MIT" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
                         <div class="panes"> 
-                            <%= image_tag("mit/mit-1.jpg", :alt => "MIT") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "MIT") %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-1.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-1.jpg", :alt => "MIT") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("mit/mit-2.jpg", :alt => "MIT") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "MIT") %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-2.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-2.jpg", :alt => "MIT") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("mit/mit-3.jpg", :alt => "MIT") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "MIT") %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-3.jpg", :alt => "MIT") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("mit/mit-3.jpg", :alt => "MIT") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll4">
+                     <% School.all.each do |sch| %>
+                            <% if sch.name == "CIT" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                        
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-1.jpg", :alt => "Cal Tech") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-1.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-1.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-2.jpg", :alt => "Cal Tech") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-2.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-2.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-3.jpg", :alt => "Cal Tech") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-3.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-3.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-4.jpg", :alt => "Cal Tech") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-4.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-4.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-5.jpg", :alt => "Cal Tech") %>
+                          <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-5.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-5.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-6.jpg", :alt => "Cal Tech") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-6.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-6.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("cit/cit-7.jpg", :alt => "Cal Tech") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-7.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-7.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                          <div class="panes"> 
-                            <%= image_tag("cit/cit-8.jpg", :alt => "Cal Tech") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "CIT") %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-8.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("cit/cit-8.jpg", :alt => "Cal Tech") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll5">
+                    <% School.all.each do |sch| %>
+                            <% if sch.name == "YALE" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                         
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-1.jpg", :alt => "Yale") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-1.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-1.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-2.jpg", :alt => "Yale") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-2.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-2.jpg", :alt => "Yale") %>
+                                    <% end %>
+                                </div>
+                        <div class="panes"> 
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-3.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-3.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-3.jpg", :alt => "Yale") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.-3).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-4.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-4.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-4.jpg", :alt => "Yale") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-5.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-5.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-5.jpg", :alt => "Yale") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-6.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-6.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-6.jpg", :alt => "Yale") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-7.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-7.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-7.jpg", :alt => "Yale") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-8.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-8.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("yale/yale-8.jpg", :alt => "Yale") %>
-                        </div>
-                        <div class="panes"> 
-                            <%= image_tag("yale/yale-9.jpg", :alt => "Yale") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Yale") %>
+                                    <% else %>
+                                    <%= image_tag("yale/yale-9.jpg", :alt => "Yale") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("yale/yale-9.jpg", :alt => "Yale") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll6">
+                     <% School.all.each do |sch| %>
+                            <% if sch.name == "USC" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                        
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-1.jpg", :alt => "USC") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-1.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-1.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-2.jpg", :alt => "USC") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-2.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-2.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-3.jpg", :alt => "USC") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-3.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-3.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-4.jpg", :alt => "USC") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-4.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-4.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-5.jpg", :alt => "USC") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-5.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-5.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-6.jpg", :alt => "USC") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-6.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-6.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("usc/usc-7.jpg", :alt => "USC") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "USC") %>
+                                    <% else %>
+                                    <%= image_tag("usc/usc-7.jpg", :alt => "USC") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("usc/usc-7.jpg", :alt => "USC") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll7">
+                    <% School.all.each do |sch| %>
+                            <% if sch.name == "DARTMOUTH" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                          
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-1.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-1.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-1.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-2.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-2.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-2.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
+                                </div>
+                        <div class="panes"> 
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-3.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-3.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-3.jpg", :alt => "Dartmouth") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-4.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-4.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-4.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-5.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-5.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-5.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-6.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-6.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-6.jpg", :alt => "Dartmouth") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-7.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-7.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-7.jpg", :alt => "Dartmouth") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-8.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-8.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-8.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-9.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-9.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-9.jpg", :alt => "Dartmouth") %>
-                        </div>
-                        <div class="panes"> 
-                            <%= image_tag("dartmouth/dartmouth-10.jpg", :alt => "Dartmouth") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-9) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-9).image, :alt => "Dartmouth") %>
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-10.jpg", :alt => "Dartmouth") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("dartmouth/dartmouth-10.jpg", :alt => "Dartmouth") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll8">
+                     <% School.all.each do |sch| %>
+                            <% if sch.name == "UCLA" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+                       
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-1.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-1.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-1.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-2.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-2.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-2.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-3.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-3.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-3.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-4.jpg", :alt => "UCLA") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-4.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-4.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-5.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-5.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-5.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-6.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-6.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-6.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-7.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-7.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-7.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-8.jpg", :alt => "UCLA") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-8.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-8.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-9.jpg", :alt => "UCLA") %>
+                           <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-9.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-9.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("ucla/ucla-10.jpg", :alt => "UCLA") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-9) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-9).image, :alt => "UCLA") %>
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-10.jpg", :alt => "UCLA") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("ucla/ucla-10.jpg", :alt => "UCLA") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll9">
+                               <% School.all.each do |sch| %>
+                            <% if sch.name == "PRINCETON" %>
+                              <% @sid = sch.id %>
+                             <% end %>
+                             <% end %>
                     <div class="section">
+               
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-1.jpg", :alt => "Princeton") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-1.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-1.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                        <div class="panes"> 
-                            <%= image_tag("princeton/princeton-2.jpg", :alt => "Princeton") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-2.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-2.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-3.jpg", :alt => "Princeton") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-3.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-3.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-4.jpg", :alt => "Princeton") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-4.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-4.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-5.jpg", :alt => "Princeton") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-5.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-5.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-6.jpg", :alt => "Princeton") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-6.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-6.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("princeton/princeton-7.jpg", :alt => "Princeton") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Princeton") %>
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-7.jpg", :alt => "Princeton") %>
+                                    <% end %> 
+                                    <% else %>
+                                    <%= image_tag("princeton/princeton-7.jpg", :alt => "Princeton") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="section-container" id="vcscroll10">
                     <div class="section">
+
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-1.jpg", :alt => "Harvard") %>
+                             <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id).image, :alt => "Harvard") %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-1.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-1.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                        <div class="panes"> 
-                            <%= image_tag("harvard/harvard-2.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-1) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-1).image, :alt => "Harvard") %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-2.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-2.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-3.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-2) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-2).image, :alt => "Harvard") %>
+                                     
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-3.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-3.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-4.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-3) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-3).image, :alt => "Harvard") %>
+                                    
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-4.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                     <% else %>
+                                    <%= image_tag("harvard/harvard-4.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-5.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-4) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-4).image, :alt => "Harvard") %>
+                                   
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-5.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                             <% else %>
+                                    <%= image_tag("harvard/harvard-5.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-6.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-5) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-5).image, :alt => "Harvard") %>
+                           
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-6.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                         <% else %>
+                                    <%= image_tag("harvard/harvard-6.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-7.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-6) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-6).image, :alt => "Harvard") %>
+                            
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-7.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-7.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-8.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-7) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-7).image, :alt => "Harvard") %>
+                          
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-8.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-8.jpg", :alt => "Harvard") %>
+                                    <% end %> 
                         </div>
                         <div class="panes"> 
-                            <%= image_tag("harvard/harvard-9.jpg", :alt => "Harvard") %>
+                            <% if School.find(@sid).pics.exists? %>
+                                       <% if School.find(@sid).pics.exists?(School.find(@sid).pics.last.id-8) %>
+                                        <%= image_tag(School.find(@sid).pics.find(School.find(@sid).pics.last.id-8).image, :alt => "Harvard") %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-9.jpg", :alt => "Harvard") %>
+                                    <% end %>
+                                    <% else %>
+                                    <%= image_tag("harvard/harvard-9.jpg", :alt => "Harvard") %>
+                                    <% end %>
                         </div>
                     </div>
                 </div>

@@ -1,18 +1,30 @@
 # Web Jam Team 8 
 
-About
-Campics is a photo sharing web application for students from different universities to share photos from their campus. 
-Users are also able to experience the life of a college student on any campus through brand new photos being uploaded.
+<h1>About</h1>
+<p>
+	Campics is a photo sharing web application for students from different universities to share photos from their campus. 
+	<br>Users are also able to experience the life of a college student on any campus through brand new photos being uploaded. 
+</p>
+<p>
+Campics is currently only available to students from the following schools: 
+<br> UCI
+<br> STANFORD
+<br> MIT
+<br> CIT
+<br> USC
+<br> YALE
+<br> DARTMOUTH
+<br> UCLA
+<br> PRINCETON
+<br> HARVARD
+</p><br>
+<h2>Authors</h2>
+<p>
+	We created Campics for the WebJam Winter 2013 hosted by ICS Student Council.
+	<br> We are all currently students from the Information and Computer Science School at UC Irvine. 
+	<li> Kevin Sison (4th Year, CSE)
+	<li> Tony Baik (3rd Year, CS)
+	<li> Christine Lew (2nd Year, CS)
+</p><br>
 
-
-Authors
-As a team of four, we created Campics for the WebJam Winter 2013 hosted by ICS Student Council. 
-We are a dynamic mix of passionate developers from UC Irvine.
-
-Kevin Sison (4th Year, CSE)
-Tony Baik (3rd Year, CS)
-Christine Lew (2nd Year, CS)
-
-[*Campics](http://fathomless-dawn-6776.herokuapp.com/)
-
-by Tony Baik, Kevin Sison, Andy Huynh, Christine Lew
+[Campics](http://fathomless-dawn-6776.herokuapp.com/)
