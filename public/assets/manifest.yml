@@ -115,10 +115,8 @@ qm.jpg: qm-a64882893a29048d34d7b0f229e7fa72.jpg
 qm/index.jpg: qm-a64882893a29048d34d7b0f229e7fa72.jpg
 stanford/stanford-1.jpg: stanford/stanford-1-845a1158a4cd3c935e341c8b2c5f4a56.jpg
 stanford/stanford-1/index.jpg: stanford/stanford-1-845a1158a4cd3c935e341c8b2c5f4a56.jpg
-stanford/stanford-10.JPG: stanford/stanford-10-30bf8952fdeefe4ec7a7d4524198fc45.JPG
-stanford/stanford-10/index.JPG: stanford/stanford-10-30bf8952fdeefe4ec7a7d4524198fc45.JPG
-stanford/stanford-13.jpg: stanford/stanford-13-ae14a47bed71c006d563c001c752d4d3.jpg
-stanford/stanford-13/index.jpg: stanford/stanford-13-ae14a47bed71c006d563c001c752d4d3.jpg
+stanford/stanford-10.jpg: stanford/stanford-10-61757c1ce5e992a69527b43eb3afbfc7.jpg
+stanford/stanford-10/index.jpg: stanford/stanford-10-61757c1ce5e992a69527b43eb3afbfc7.jpg
 stanford/stanford-3.jpg: stanford/stanford-3-b3469e9a7cd0f37292da5e737e3cdd9d.jpg
 stanford/stanford-3/index.jpg: stanford/stanford-3-b3469e9a7cd0f37292da5e737e3cdd9d.jpg
 stanford/stanford-4.jpg: stanford/stanford-4-3de43f5c6861ade727b463c527dd609d.jpg
@@ -129,8 +127,10 @@ stanford/stanford-6.jpg: stanford/stanford-6-acc26b2c0309527c8a330b90188c8a21.jp
 stanford/stanford-6/index.jpg: stanford/stanford-6-acc26b2c0309527c8a330b90188c8a21.jpg
 stanford/stanford-7.jpg: stanford/stanford-7-c01ed06825825da74c60449405551b4f.jpg
 stanford/stanford-7/index.jpg: stanford/stanford-7-c01ed06825825da74c60449405551b4f.jpg
-stanford/stanford-8.jpg: stanford/stanford-8-61757c1ce5e992a69527b43eb3afbfc7.jpg
-stanford/stanford-8/index.jpg: stanford/stanford-8-61757c1ce5e992a69527b43eb3afbfc7.jpg
+stanford/stanford-8.jpg: stanford/stanford-8-ae14a47bed71c006d563c001c752d4d3.jpg
+stanford/stanford-8/index.jpg: stanford/stanford-8-ae14a47bed71c006d563c001c752d4d3.jpg
+stanford/stanford-88.JPG: stanford/stanford-88-30bf8952fdeefe4ec7a7d4524198fc45.JPG
+stanford/stanford-88/index.JPG: stanford/stanford-88-30bf8952fdeefe4ec7a7d4524198fc45.JPG
 stanford/stanford-9.jpg: stanford/stanford-9-e81686783f757f4fdf935ab2263fdfa5.jpg
 stanford/stanford-9/index.jpg: stanford/stanford-9-e81686783f757f4fdf935ab2263fdfa5.jpg
 uci/UCI-2.jpg: uci/UCI-2-979710a7cf47a2d4e2e7f6c213b6dbb0.jpg
