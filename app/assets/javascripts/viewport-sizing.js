@@ -16,7 +16,6 @@
 
         var bottomBorderHeight = $('#bottom-border').height();
         var topHeaderHeight = 40;
-        var scrollHeight = $('.user-container').scrollTop();
 
         KokkoSuite.utils.Sizing.addFunction(function () {
             $('.vwrapper').css({
@@ -66,6 +65,10 @@
             $('.section img').css({
                 maxWidth: 0.7*KokkoSuite.utils.getWindowAxisLength('width') + 'px',
                 maxHeight: 0.4*KokkoSuite.utils.getWindowAxisLength('width') + 'px'
+            }),
+
+            $('.container').css({
+                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
             }),
 
             setTimeout(function() {$('.section img').each(function() {

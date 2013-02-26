@@ -497,8 +497,6 @@ span.tweet_text
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     height: 100%;
 }
 
@@ -644,6 +642,7 @@ span.tweet_text
     background-image: radial-gradient(circle farthest-side at center, #FFFFFF 0%, #DBDBDB 100%);
 }
 
+
 .list-page .btn
 {
     margin: 5px 10px;
@@ -653,3 +652,13 @@ span.tweet_text
 {
     margin: 10px;
 }
+
+.list-page-button
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 25px !important;
+    margin-right: 25px !important;
+}
+
