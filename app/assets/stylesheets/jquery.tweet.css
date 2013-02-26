@@ -1,3 +1,29 @@
+/* --------------------------------------------------------
+     Twitter Feed
+-----------------------------------------------------------*/
+.ticker ul.tweet_list
+{
+    height:4em;
+    overflow-y:hidden;
+    background-color: transparent;
+}
+.ticker .tweet_list li 
+{
+    height: 4em;
+}
+
+.ticker 
+{
+    width: 55%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+span.tweet_text
+{
+    font-size: 100%;
+}
+
 .tweet,
 .query {
 	font: 80% Georgia, serif;
@@ -26,7 +52,7 @@
 
 .tweet_list li a {
 	color: #0C717A;
-	font-size: 75%;
+	font-size: 100%;
 }
 
 .tweet_list .tweet_even {
@@ -39,5 +65,5 @@ padding-right: .5em; float: left;
 
 .tweet_list .tweet_avatar img {
 	vertical-align: middle;
-	padding-top: 1em;
+	padding-bottom: 5px;
 }

@@ -67,7 +67,7 @@
 
 #bottom-border-usc span
 {
-    color: #990000;
+    color: #990000 !important;
 }
 
 #bottom-border-dartmouth
@@ -88,7 +88,7 @@
 
 #bottom-border-ucla span
 {
-    color: #ffde6c;
+    color: #ffde6c !important;
 }
 
 #bottom-border-princeton
