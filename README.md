@@ -4,19 +4,19 @@
 <p>
 	Campics is a photo sharing web application for students from different universities to share photos from their campus. 
 	<br>Users are also able to experience the life of a college student on any campus through brand new photos being uploaded. 
-</p><br>
+</p>
 <p>
 Campics is currently only available to students from the following schools: 
-<li> UCI
-<li> STANFORD
-<li> MIT
-<li> CIT
-<li> USC
-<li> YALE
-<li> DARTMOUTH
-<li> UCLA
-<li> PRINCETON
-<li> HARVARD
+<br> UCI
+<br> STANFORD
+<br> MIT
+<br> CIT
+<br> USC
+<br> YALE
+<br> DARTMOUTH
+<br> UCLA
+<br> PRINCETON
+<br> HARVARD
 </p><br>
 <h2>Authors</h2>
 <p>
@@ -27,6 +27,4 @@ Campics is currently only available to students from the following schools:
 	<li> Christine Lew (2nd Year, CS)
 </p><br>
 
-[*Campics](http://fathomless-dawn-6776.herokuapp.com/)
-
-by Tony Baik, Kevin Sison, Andy Huynh, Christine Lew
+[Campics](http://fathomless-dawn-6776.herokuapp.com/)
