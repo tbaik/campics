@@ -1,4 +1,3 @@
-
 <div class="form-actions list-page">
   <h1>Picture List</h1>
 
@@ -7,46 +6,43 @@
       </tr>
     <% @pics.each do |pic| %>
       <tr>
-        <td><%= link_to (image_tag pic.image(:medium)), pic %></td>
-        <td><%= pic.description %></td>
-        <td><%= link_to 'Show', pic %></td>
            <% @user = current_user %>
        <% @userEmail = @user.email.split('@')[1] %>
         <% @sid = 0 %>
         <% if @userEmail == "uci.edu" %>
-          <%   School.all.each do |sch| %>
+        <% School.all.each do |sch| %>
           <%   if sch.name == "UCI"  %>
          <%      @sid = sch.id %>
-       <%      end %>
-       <%    end %>
-    <%   elsif @userEmail == "stanford.edu" %>
-     <%    School.all.each do |sch| %>
-      <%       if sch.name == "STANFORD"  %>
-      <%       @sid = sch.id %>
-        <%   end %>
-       <%  end %>
-     <%  elsif @userEmail == "mit.edu" %>
-     <%    School.all.each do |sch| %>
-      <%       if sch.name == "MIT"  %>
-      <%       @sid = sch.id %>
-      <%     end %>
-      <%   end %>
-     <%  elsif @userEmail == "caltech.edu" %>
-     <%    School.all.each do |sch| %>
-      <%       if sch.name == "CIT"  %>
-      <%       @sid = sch.id %>
-      <%     end %>
-      <%   end %>
-     <%  elsif @userEmail == "usc.edu" %>
-      <%   School.all.each do |sch| %>
-       <%      if sch.name == "USC"  %>
-        <%     @sid = sch.id %>
-       <%    end %>
-     <%    end %>
-    <%   elsif @userEmail == "yale.edu" %>
-      <%   School.all.each do |sch| %>
-      <%       if sch.name == "YALE"  %>
-      <%       @sid = sch.id %>
+       <% end %>
+       <% end %>
+    <% elsif @userEmail == "stanford.edu" %>
+     <% School.all.each do |sch| %>
+      <% if sch.name == "STANFORD"  %>
+      <% @sid = sch.id %>
+        <% end %>
+       <% end %>
+     <% elsif @userEmail == "mit.edu" %>
+     <% School.all.each do |sch| %>
+      <% if sch.name == "MIT"  %>
+      <% @sid = sch.id %>
+      <% end %>
+      <% end %>
+     <% elsif @userEmail == "caltech.edu" %>
+     <% School.all.each do |sch| %>
+      <% if sch.name == "CIT"  %>
+      <% @sid = sch.id %>
+      <% end %>
+      <% end %>
+     <% elsif @userEmail == "usc.edu" %>
+      <% School.all.each do |sch| %>
+       <% if sch.name == "USC"  %>
+        <% @sid = sch.id %>
+       <% end %>
+     <% end %>
+    <% elsif @userEmail == "yale.edu" %>
+      <% School.all.each do |sch| %>
+      <% if sch.name == "YALE"  %>
+      <% @sid = sch.id %>
       <%     end %>
       <%   end %>
     <%   elsif @userEmail == "dartmouth.edu" %>
@@ -74,14 +70,15 @@
       <%     end %>
      <%    end %>
      <%  end %> 
+    <%= link_to (image_tag pic.image(:medium)), pic %>
+        <p><%= pic.description %></p>
      <% if School.find(@sid) == pic.school %>
-      <%= link_to 'Edit', edit_pic_path(pic), class: "btn btn-inverse" %>
-      <%= link_to 'Delete', pic, class: "btn btn-inverse", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_pic_path(pic), class: "btn" %>
+      <%= link_to 'Delete', pic, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+     <% end %>
+   </tr>
       <br></br>
     <% end %>
-
-    <tr></tr>
-    <td></td>
   </table>
 
   <%= link_to 'Upload Picture', new_pic_path, class: "btn btn-primary btn-large" %>
