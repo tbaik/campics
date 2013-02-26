@@ -57,11 +57,11 @@ a
 }
 
 #header-logo {
-	left: 0px;
-	right: 0px;	
+    left: 0px;
+    right: 0px; 
     padding: 1em;
-	z-index: 1;
-	position: fixed;
+    z-index: 1;
+    position: fixed;
     -moz-box-shadow: 0 0 5px 5px #000;
     -webkit-box-shadow: 0 0 5px 5px#000;
     box-shadow: 0 0 5px 5px #000;
@@ -77,32 +77,32 @@ a
 
 
 
-}	
-		
+}   
+
 .hwrapper {
-	position: relative;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 #hscroll-main-wrapper
 {
-	position: relative;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
-			
+
 .vwrapper
 {
     position: relative;
     display: block;
-	float: left;
-	width: 300px;
-	padding: 0px 20px;
+    float: left;
+    width: 300px;
+    padding: 0px 20px;
 
 }
 
@@ -418,19 +418,19 @@ a
 
 #hscroll-main-wrapper
 {
-	position: relative;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px
 }
 
 .section-container
 {
     position: relative;
     display: block;
-	float: left;
-	padding: 0px;
+    float: left;
+    padding: 0px;
 }
 
 .section
@@ -497,6 +497,8 @@ span.tweet_text
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     height: 100%;
 }
 
@@ -642,7 +644,6 @@ span.tweet_text
     background-image: radial-gradient(circle farthest-side at center, #FFFFFF 0%, #DBDBDB 100%);
 }
 
-
 .list-page .btn
 {
     margin: 5px 10px;
@@ -652,13 +653,3 @@ span.tweet_text
 {
     margin: 10px;
 }
-
-.list-page-button
-{
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 25px !important;
-    margin-right: 25px !important;
-}
-
