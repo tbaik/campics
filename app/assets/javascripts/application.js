@@ -13,6 +13,7 @@
 //= require jquery-1.8.3.min
 //= require jquery
 //= require jquery_ujs
+//= require jquery.masonry.min.js
 //= require easeljs-0.5.0.min.js
 //= require iscroll.js
 //= require kokko-suite.js
