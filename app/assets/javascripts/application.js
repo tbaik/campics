@@ -16,5 +16,6 @@
 //= require iscroll.js
 //= require kokko-suite.js
 //= require tweenjs-0.3.0.min.js
+//= require jquery.tweet.js
 //= require bootstrap
 //= require_tree .

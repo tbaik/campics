@@ -462,3 +462,20 @@ a
 {
     height: auto;
 }
+
+/* --------------------------------------------------------
+     Twitter Feed
+-----------------------------------------------------------*/
+#ticker ul.tweet_list
+{
+    height:4em;
+    overflow-y:hidden;
+}
+#ticker .tweet_list li 
+{
+    height: 4em;
+}
+#ticker 
+{
+    width: 300px;
+}

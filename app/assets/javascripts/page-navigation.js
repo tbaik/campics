@@ -4,27 +4,6 @@
             opacity: 1,
             element: $('#container')
         };
-
-
-    // var isDragging = false;
-
-    // $('a')
-    // .mousedown(function() {
-    //     $(window).mousemove(function() {
-    //         console.log('down');
-    //         isDragging = true;
-    //         $(window).unbind("mousemove");
-    //     });
-    // })
-    // .mouseup(function() {
-    //     console.log('up');
-    //     var wasDragging = isDragging;
-    //     isDragging = false;
-    //     $(window).unbind("mousemove");
-    //     if (!wasDragging) { //was clicking
-    //         transition();
-    //     }
-    // });
     
     var xcoord, ycoord;
     $('.image-links').mousedown(function(e) {
@@ -270,5 +249,27 @@
                 this.style.marginLeft = -Math.round(w/2) + 'px';
             })}, 100)
     };
+
+    // Twitter Feed
+        $("#ticker").tweet({
+                username: "UCIrvine", // define your twitter username
+                page: 1,
+                avatar_size: 32, // avatar size in px
+                count: 20, // how many tweets to show
+                loading_text: "loading ..."
+            }).bind("loaded", function () {
+                var ul = $(this).find(".tweet_list");
+                var ticker = function () {
+                setTimeout(function () {
+                ul.find('li:first').animate({
+                marginTop: '-4em'
+            }, 500, function () {
+                $(this).detach().appendTo(ul).removeAttr('style');
+                });
+                ticker();
+                }, 4000); // duration before next tick (4000 = 4 secs)
+            };
+                ticker();
+        });
 
 });

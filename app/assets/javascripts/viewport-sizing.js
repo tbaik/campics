@@ -71,7 +71,7 @@
                 var h = $(this).height();
                 var w = $(this).width();
 
-                this.style.marginTop = -Math.round((h + 25)/2) + 'px';
+                this.style.marginTop = -Math.round((h + bottomBorderHeight)/2) + 'px';
                 this.style.marginLeft = -Math.round(w/2) + 'px';
             })}, 100)
         }, 'resizeHomePage');
