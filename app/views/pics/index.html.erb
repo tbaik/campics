@@ -9,8 +9,8 @@
           <% @sid = 0 %>
           <% if @userEmail == "uci.edu" %>
           <% School.all.each do |sch| %>
-            <%   if sch.name == "UCI"  %>
-           <%      @sid = sch.id %>
+            <% if sch.name == "UCI"  %>
+           <% @sid = sch.id %>
          <% end %>
          <% end %>
       <% elsif @userEmail == "stanford.edu" %>
@@ -70,9 +70,11 @@
        <%  end %> 
       <%= link_to (image_tag pic.image(:medium)), pic %>
           <p><%= pic.description %></p>
+          <% if @sid != 0 %>
        <% if School.find(@sid) == pic.school %>
         <%= link_to 'Edit', edit_pic_path(pic), class: "btn" %>
         <%= link_to 'Delete', pic, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+       <% end %>
        <% end %>
       <br></br>
     </div>
