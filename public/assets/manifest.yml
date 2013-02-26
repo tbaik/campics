@@ -115,10 +115,10 @@ qm.jpg: qm-a64882893a29048d34d7b0f229e7fa72.jpg
 qm/index.jpg: qm-a64882893a29048d34d7b0f229e7fa72.jpg
 stanford/stanford-1.jpg: stanford/stanford-1-845a1158a4cd3c935e341c8b2c5f4a56.jpg
 stanford/stanford-1/index.jpg: stanford/stanford-1-845a1158a4cd3c935e341c8b2c5f4a56.jpg
-stanford/stanford-15.jpg: stanford/stanford-15-723fd9efbade72236eddec35e44aa9c7.jpg
-stanford/stanford-15/index.jpg: stanford/stanford-15-723fd9efbade72236eddec35e44aa9c7.jpg
 stanford/stanford-2.JPG: stanford/stanford-2-c854f3af26237ffb3cdbf0c9f1297016.JPG
 stanford/stanford-2/index.JPG: stanford/stanford-2-c854f3af26237ffb3cdbf0c9f1297016.JPG
+stanford/stanford-22.jpg: stanford/stanford-22-723fd9efbade72236eddec35e44aa9c7.jpg
+stanford/stanford-22/index.jpg: stanford/stanford-22-723fd9efbade72236eddec35e44aa9c7.jpg
 stanford/stanford-3.jpg: stanford/stanford-3-b3469e9a7cd0f37292da5e737e3cdd9d.jpg
 stanford/stanford-3/index.jpg: stanford/stanford-3-b3469e9a7cd0f37292da5e737e3cdd9d.jpg
 stanford/stanford-4.jpg: stanford/stanford-4-3de43f5c6861ade727b463c527dd609d.jpg
@@ -211,10 +211,10 @@ yale/yale-81.JPG: yale/yale-81-b62a2beb9e0ed8ef1430d8e7a1ed0264.JPG
 yale/yale-81/index.JPG: yale/yale-81-b62a2beb9e0ed8ef1430d8e7a1ed0264.JPG
 yale/yale-9.jpg: yale/yale-9-77a3dd78266d261e841fa1d2d6726577.jpg
 yale/yale-9/index.jpg: yale/yale-9-77a3dd78266d261e841fa1d2d6726577.jpg
-application.js: application-d3477bc375514367e9cb1a4c54d7ec1c.js
-application/index.js: application-d3477bc375514367e9cb1a4c54d7ec1c.js
-application.css: application-c98429e5cbde972358ff62cdd3457354.css
-application/index.css: application-c98429e5cbde972358ff62cdd3457354.css
+application.js: application-f321115b8b179acf471b52c123b907a7.js
+application/index.js: application-f321115b8b179acf471b52c123b907a7.js
+application.css: application-ed23a0e219f7dd109433b7eebfca8603.css
+application/index.css: application-ed23a0e219f7dd109433b7eebfca8603.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
