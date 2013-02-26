@@ -74,10 +74,11 @@
             <% if @sid != 0 %>
          <% if School.find(@sid) == pic.school %>
           <%= link_to 'Edit', edit_pic_path(pic) %>
+
           
-          <%= link_to 'Delete', pic, method: :delete, data: { confirm: 'Are you sure?' } %>
          <% end %>
          <% end %>
+         <%= link_to 'Delete', pic, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br></br>
       </div>
     <% end %>
