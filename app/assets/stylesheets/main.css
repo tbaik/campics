@@ -7,7 +7,6 @@
     background-color: #fff;
     margin: 0 0;
     padding: 0 0;
-    overflow:hidden;
 }
 
 ul 
@@ -84,7 +83,6 @@ a
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-    overflow: hidden;
 }
 
 #hscroll-main-wrapper
@@ -94,7 +92,6 @@ a
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-    overflow: hidden;
 }
 			
 .vwrapper
@@ -423,8 +420,7 @@ a
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	bottom: 0px;
-	overflow: hidden;
+	bottom: 0px
 }
 
 .section-container
