@@ -330,7 +330,7 @@ class PicsController < ApplicationController
       end
     end
   end
-    @pic = School.find(@sid).pics.find(params[:id])
+    @pic = Pic.find(params[:id])
     @pic.destroy
 
     respond_to do |format|
