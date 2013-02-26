@@ -497,11 +497,6 @@ span.tweet_text
     position: absolute;
     top: 0;
     left: 0;
-<<<<<<< HEAD
-    bottom: 0;
-    right: 0;
-=======
->>>>>>> 3473cc0f427e1e285541c0cdf4fff6c7337603e3
     height: 100%;
 }
 
@@ -626,16 +621,10 @@ span.tweet_text
 .list-page
 {
     width: 80% !important;
-<<<<<<< HEAD
     position: relative;
 
     /* IE10 Consumer Preview */ 
   background-image: -ms-radial-gradient(center, circle farthest-side, #FFFFFF 0%, #DBDBDB 100%);
-=======
-
-    /* IE10 Consumer Preview */ 
-    background-image: -ms-radial-gradient(center, circle farthest-side, #FFFFFF 0%, #DBDBDB 100%);
->>>>>>> 3473cc0f427e1e285541c0cdf4fff6c7337603e3
 
     /* Mozilla Firefox */ 
     background-image: -moz-radial-gradient(center, circle farthest-side, #FFFFFF 0%, #DBDBDB 100%);
