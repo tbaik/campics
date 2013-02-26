@@ -4,8 +4,8 @@ gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
-gem "cocaine", "= 0.5.1"
-gem "paperclip", "= 3.4.1"
+gem "cocaine", "= 0.3.2"
+gem "paperclip", "= 3.0.4"
 
 group :production do 
 	gem 'pg'
