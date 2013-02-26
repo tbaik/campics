@@ -373,7 +373,7 @@ a
 .college-text
 {
     position: absolute;
-    z-index: 1;
+    z-index: 150;
 }
 
 .college-text img
@@ -383,6 +383,7 @@ a
     float: left;
     margin: 0px 20px;
     width: 300px;
+    z-index: 150;
 }
 
 /* --------------------------------------------------------
@@ -462,32 +463,6 @@ a
 }
 
 /* --------------------------------------------------------
-     Twitter Feed
------------------------------------------------------------*/
-.ticker ul.tweet_list
-{
-    height:4em;
-    overflow-y:hidden;
-    background-color: transparent;
-}
-.ticker .tweet_list li 
-{
-    height: 4em;
-}
-
-.ticker 
-{
-    width: 55%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-span.tweet_text
-{
-    font-size: 100%;
-}
-
-/* --------------------------------------------------------
      Sign-Up
 -----------------------------------------------------------*/
 
@@ -500,6 +475,7 @@ span.tweet_text
     bottom: 0;
     right: 0;
     height: 100%;
+    overflow: visible !important;
 }
 
 .user-content
@@ -652,4 +628,47 @@ span.tweet_text
 .list-page p
 {
     margin: 10px;
+}
+
+#show-picture-container
+{
+    position: relative;
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------
+     Navigation Bar
+-----------------------------------------------------------*/
+
+.container
+{
+    padding-left: 20px;
+}
+
+.nav.pull-right
+{
+    padding-right: 40px !important;
+}
+
+.btn-primary:active, .btn-primary.active, .btn-primary
+{
+    color: #FFFFFF !important;
+}
+
+.btn-primary:hover
+{
+    color: #333333 !important;
+}
+
+.navbar
+{
+
+    background-color: #4e4e4e;
+    background-image: -moz-linear-gradient(top, #5e5e5e, #383838);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5e5e5e), to(#383838));
+    background-image: -webkit-linear-gradient(top, #5e5e5e, #383838);
+    background-image: -o-linear-gradient(top, #5e5e5e, #383838);
+    background-image: linear-gradient(to bottom, #5e5e5e, #383838)
 }
