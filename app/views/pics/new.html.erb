@@ -1,5 +1,19 @@
-<h1>Add New Picture</h1>
+ <div class="form-actions new-page">
 
-<%= render 'form' %>
+ 	<h1>Upload Image</h1>
+
+	<%= simple_form_for(@pic, class: "form-horizontal") do |f| %>
+	<%= f.error_notification %>
+	<%= f.full_error :image_file_size, class: "alert alert-error" %>
+	<%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+  	<%= f.input :image, label: "Image uploaded to...", class: "new-page-button" %>
+
+    <%= f.input :description, as: :text, input_html: { rows: "5"} %>
+
+	<%= f.button :submit, class: "btn btn-primary btn-large" %>
+
+	<% end %>
+ </div>
 
 <%= link_to 'Back', pics_path %>

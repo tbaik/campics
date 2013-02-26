@@ -1,19 +1,41 @@
-<h1>Picture List</h1>
+<div class="form-actions list-page">
+	<h1>Picture List</h1>
+	<table class ="table table-striped">
+		<% @pics.each do |pic| %>
+			<%= link_to (image_tag pic.image(:medium)), pic %>
+			<p><%= pic.description %></p>
 
-<table class ="table table-striped">
-  <tr>
-  </tr>
-<% @pics.each do |pic| %>
-  <tr>
-    <td><%= link_to (image_tag pic.image(:medium)), pic %></td>
-    <td><%= pic.description %></td>
-    <td><%= link_to 'Show', pic %></td>
-    <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
-    <td><%= link_to 'Delete', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+			<%= link_to 'Show', pic, class: "btn btn-inverse" %>
 
-<br />
+			<%= link_to 'Edit', edit_pic_path(pic), class: "btn btn-inverse" %>
 
-<%= link_to 'New Pic', new_pic_path %>
+			<%= link_to 'Delete', pic, class: "btn btn-inverse", method: :delete, data: { confirm: 'Are you sure?' } %>
+			<br></br>
+
+			<%= link_to (image_tag pic.image(:medium)), pic %>
+			<p><%= pic.description %></p>
+
+			<%= link_to 'Show', pic, class: "btn btn-inverse" %>
+
+			<%= link_to 'Edit', edit_pic_path(pic), class: "btn btn-inverse" %>
+
+			<%= link_to 'Delete', pic, class: "btn btn-inverse", method: :delete, data: { confirm: 'Are you sure?' } %>
+			<br></br>
+
+			<%= link_to (image_tag pic.image(:medium)), pic %>
+			<p><%= pic.description %></p>
+
+			<%= link_to 'Show', pic, class: "btn btn-inverse" %>
+
+			<%= link_to 'Edit', edit_pic_path(pic), class: "btn btn-inverse" %>
+
+			<%= link_to 'Delete', pic, class: "btn btn-inverse", method: :delete, data: { confirm: 'Are you sure?' } %>
+			<br></br>
+		<% end %>
+
+		<tr></tr>
+		<td></td>
+	</table>
+
+	<%= link_to 'Upload Picture', new_pic_path, class: "btn btn-primary btn-large" %>
+</div>

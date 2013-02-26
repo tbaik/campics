@@ -10,12 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require jquery-1.8.3.min
 //= require jquery
 //= require jquery_ujs
 //= require easeljs-0.5.0.min.js
 //= require iscroll.js
 //= require kokko-suite.js
 //= require tweenjs-0.3.0.min.js
-//= require jquery.tweet.js
 //= require bootstrap
 //= require_tree .

@@ -15,7 +15,7 @@
     setWindowResize: function () {
 
         var bottomBorderHeight = $('#bottom-border').height();
-        var topHeaderHeight = 42;
+        var topHeaderHeight = 40;
 
         KokkoSuite.utils.Sizing.addFunction(function () {
             $('.vwrapper').css({

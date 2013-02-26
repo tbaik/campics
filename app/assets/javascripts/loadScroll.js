@@ -3,7 +3,7 @@
     vcScroll1, vcScroll2, vcScroll3, vcScroll4,
     vcScroll5, vcScroll6, vcScroll7, vScroll8, 
     vScroll9, vScroll10, vcScroll8, vcScroll9, 
-    vcScroll10;
+    vcScroll10
 
 function loaded() {
     setTimeout(function () {

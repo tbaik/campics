@@ -1,6 +1,18 @@
-<h1>Picture Update</h1>
+<div class="form-actions update-page">
+	<h1>Edit Picture</h1>
 
-<%= render 'form' %>
+	<%= simple_form_for(@pic, class: "form-horizontal") do |f| %>
+	<%= f.error_notification %>
+	<%= f.full_error :image_file_size, class: "alert alert-error" %>
+	<%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-<%= link_to 'Show', @pic %> |
-<%= link_to 'Back', pics_path %>
+  	<%= f.input :image, label: "Upload an image" %>
+    <%= f.input :description, as: :text, input_html: { rows: "5"} %>
+
+	<%= f.button :submit, class: "btn btn-primary btn-large" %>
+
+	<% end %>
+
+	<%= link_to 'Show Image', @pic %> |
+	<%= link_to 'Back to Picture List', pics_path %>
+</div>
