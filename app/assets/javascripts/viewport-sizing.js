@@ -68,6 +68,10 @@
                 maxHeight: 0.4*KokkoSuite.utils.getWindowAxisLength('width') + 'px'
             }),
 
+            $('.container').css({
+                width: KokkoSuite.utils.getWindowAxisLength('width') + 'px'
+            }),
+
             setTimeout(function() {$('.section img').each(function() {
                 var h = $(this).height();
                 var w = $(this).width();
