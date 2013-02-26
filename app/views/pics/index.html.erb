@@ -8,8 +8,74 @@
     <td><%= link_to (image_tag pic.image(:medium)), pic %></td>
     <td><%= pic.description %></td>
     <td><%= link_to 'Show', pic %></td>
+       <% @user = current_user %>
+   <% @userEmail = @user.email.split('@')[1] %>
+    <% @sid = 0 %>
+    <% if @userEmail == "uci.edu" %>
+      <%   School.all.each do |sch| %>
+      <%   if sch.name == "UCI"  %>
+     <%      @sid = sch.id %>
+   <%      end %>
+   <%    end %>
+<%   elsif @userEmail == "stanford.edu" %>
+ <%    School.all.each do |sch| %>
+  <%       if sch.name == "STANFORD"  %>
+  <%       @sid = sch.id %>
+    <%   end %>
+   <%  end %>
+ <%  elsif @userEmail == "mit.edu" %>
+ <%    School.all.each do |sch| %>
+  <%       if sch.name == "MIT"  %>
+  <%       @sid = sch.id %>
+  <%     end %>
+  <%   end %>
+ <%  elsif @userEmail == "caltech.edu" %>
+ <%    School.all.each do |sch| %>
+  <%       if sch.name == "CIT"  %>
+  <%       @sid = sch.id %>
+  <%     end %>
+  <%   end %>
+ <%  elsif @userEmail == "usc.edu" %>
+  <%   School.all.each do |sch| %>
+   <%      if sch.name == "USC"  %>
+    <%     @sid = sch.id %>
+   <%    end %>
+ <%    end %>
+<%   elsif @userEmail == "yale.edu" %>
+  <%   School.all.each do |sch| %>
+  <%       if sch.name == "YALE"  %>
+  <%       @sid = sch.id %>
+  <%     end %>
+  <%   end %>
+<%   elsif @userEmail == "dartmouth.edu" %>
+ <%    School.all.each do |sch| %>
+  <%       if sch.name == "DARTMOUTH"  %>
+    <%     @sid = sch.id %>
+ <%      end %>
+ <%    end %>
+  <% elsif @userEmail == "ucla.edu" %>
+  <%   School.all.each do |sch| %>
+   <%      if sch.name == "UCLA"  %>
+   <%      @sid = sch.id %>
+  <%     end %>
+   <%  end %>
+ <%  elsif @userEmail == "princeton.edu" %>
+  <%   School.all.each do |sch| %>
+  <%       if sch.name == "PRINCETON"  %>
+   <%      @sid = sch.id %>
+   <%    end %>
+  <%   end %>
+ <%  elsif @userEmail == "harvard.edu" %>
+  <%   School.all.each do |sch| %>
+  <%       if sch.name == "HARVARD"  %>
+  <%       @sid = sch.id %>
+  <%     end %>
+ <%    end %>
+ <%  end %> 
+ <% if School.find(@sid) == pic.school %>
     <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
     <td><%= link_to 'Delete', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

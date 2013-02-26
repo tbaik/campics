@@ -1,4 +1,6 @@
 class PicsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
+
   # GET /pics
   # GET /pics.json
   def index
@@ -24,7 +26,71 @@ class PicsController < ApplicationController
   # GET /pics/new
   # GET /pics/new.json
   def new
-    @pic = Pic.new
+    @user = current_user
+    @userEmail = @user.email.split('@')[1]
+    @sid = 0
+    if @userEmail == "uci.edu"
+        School.all.each do |sch|
+        if sch.name == "UCI" 
+          @sid = sch.id
+        end
+      end
+  elsif @userEmail == "stanford.edu"
+    School.all.each do |sch|
+        if sch.name == "STANFORD" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "mit.edu"
+    School.all.each do |sch|
+        if sch.name == "MIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "caltech.edu"
+    School.all.each do |sch|
+        if sch.name == "CIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "usc.edu"
+    School.all.each do |sch|
+        if sch.name == "USC" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "yale.edu"
+    School.all.each do |sch|
+        if sch.name == "YALE" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "dartmouth.edu"
+    School.all.each do |sch|
+        if sch.name == "DARTMOUTH" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "ucla.edu"
+    School.all.each do |sch|
+        if sch.name == "UCLA" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "princeton.edu"
+    School.all.each do |sch|
+        if sch.name == "PRINCETON" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "harvard.edu"
+    School.all.each do |sch|
+        if sch.name == "HARVARD" 
+        @sid = sch.id
+      end
+    end
+  end
+    @pic = School.find(@sid).pics.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +100,141 @@ class PicsController < ApplicationController
 
   # GET /pics/1/edit
   def edit
-    @pic = Pic.find(params[:id])
+     @user = current_user
+    @userEmail = @user.email.split('@')[1]
+    @sid = 0
+    if @userEmail == "uci.edu"
+        School.all.each do |sch|
+        if sch.name == "UCI" 
+          @sid = sch.id
+        end
+      end
+  elsif @userEmail == "stanford.edu"
+    School.all.each do |sch|
+        if sch.name == "STANFORD" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "mit.edu"
+    School.all.each do |sch|
+        if sch.name == "MIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "caltech.edu"
+    School.all.each do |sch|
+        if sch.name == "CIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "usc.edu"
+    School.all.each do |sch|
+        if sch.name == "USC" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "yale.edu"
+    School.all.each do |sch|
+        if sch.name == "YALE" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "dartmouth.edu"
+    School.all.each do |sch|
+        if sch.name == "DARTMOUTH" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "ucla.edu"
+    School.all.each do |sch|
+        if sch.name == "UCLA" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "princeton.edu"
+    School.all.each do |sch|
+        if sch.name == "PRINCETON" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "harvard.edu"
+    School.all.each do |sch|
+        if sch.name == "HARVARD" 
+        @sid = sch.id
+      end
+    end
+  end
+    @pic = School.find(@sid).pics.find(params[:id])
   end
 
   # POST /pics
   # POST /pics.json
   def create
-    @pic = Pic.new(params[:pic])
+    @user = current_user
+    @userEmail = @user.email.split('@')[1]
+    @sid = 0
+    if @userEmail == "uci.edu"
+        School.all.each do |sch|
+        if sch.name == "UCI" 
+          @sid = sch.id
+        end
+      end
+  elsif @userEmail == "stanford.edu"
+    School.all.each do |sch|
+        if sch.name == "STANFORD" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "mit.edu"
+    School.all.each do |sch|
+        if sch.name == "MIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "caltech.edu"
+    School.all.each do |sch|
+        if sch.name == "CIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "usc.edu"
+    School.all.each do |sch|
+        if sch.name == "USC" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "yale.edu"
+    School.all.each do |sch|
+        if sch.name == "YALE" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "dartmouth.edu"
+    School.all.each do |sch|
+        if sch.name == "DARTMOUTH" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "ucla.edu"
+    School.all.each do |sch|
+        if sch.name == "UCLA" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "princeton.edu"
+    School.all.each do |sch|
+        if sch.name == "PRINCETON" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "harvard.edu"
+    School.all.each do |sch|
+        if sch.name == "HARVARD" 
+        @sid = sch.id
+      end
+    end
+  end
+    @pic = School.find(@sid).pics.new(params[:pic])
 
     respond_to do |format|
       if @pic.save
@@ -72,7 +266,71 @@ class PicsController < ApplicationController
   # DELETE /pics/1
   # DELETE /pics/1.json
   def destroy
-    @pic = Pic.find(params[:id])
+        @user = current_user
+    @userEmail = @user.email.split('@')[1]
+    @sid = 0
+    if @userEmail == "uci.edu"
+        School.all.each do |sch|
+        if sch.name == "UCI" 
+          @sid = sch.id
+        end
+      end
+  elsif @userEmail == "stanford.edu"
+    School.all.each do |sch|
+        if sch.name == "STANFORD" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "mit.edu"
+    School.all.each do |sch|
+        if sch.name == "MIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "caltech.edu"
+    School.all.each do |sch|
+        if sch.name == "CIT" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "usc.edu"
+    School.all.each do |sch|
+        if sch.name == "USC" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "yale.edu"
+    School.all.each do |sch|
+        if sch.name == "YALE" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "dartmouth.edu"
+    School.all.each do |sch|
+        if sch.name == "DARTMOUTH" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "ucla.edu"
+    School.all.each do |sch|
+        if sch.name == "UCLA" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "princeton.edu"
+    School.all.each do |sch|
+        if sch.name == "PRINCETON" 
+        @sid = sch.id
+      end
+    end
+  elsif @userEmail == "harvard.edu"
+    School.all.each do |sch|
+        if sch.name == "HARVARD" 
+        @sid = sch.id
+      end
+    end
+  end
+    @pic = School.find(@sid).pics.find(params[:id])
     @pic.destroy
 
     respond_to do |format|
