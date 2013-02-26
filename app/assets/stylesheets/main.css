@@ -8,6 +8,7 @@
     margin: 0 0;
     padding: 0 0;
     background-image: url('/assets/classy_fabric.png');
+    overflow:hidden;
 }
 
 ul 
