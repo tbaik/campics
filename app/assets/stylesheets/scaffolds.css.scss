@@ -12,6 +12,11 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+.tweet_list p, .tweet_list ol, .tweet_list ul, .tweet_list td
+{
+  font-weight: bold;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
