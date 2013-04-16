@@ -27,4 +27,4 @@ Campics is currently only available to students from the following schools:
 	<li> Christine Lew (2nd Year, CS)
 </p><br>
 
-[Campics](http://fathomless-dawn-6776.herokuapp.com/)
+[Campics](http://campics.herokuapp.com/)
