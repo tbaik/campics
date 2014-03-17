@@ -1,9 +1,9 @@
-# Web Jam Team 8 
+# Campics
 
-<h1>About</h1>
-<p>
-	Campics is a photo sharing web application for students from different universities to share photos from their campus. 
-	<br>Users are also able to experience the life of a college student on any campus through brand new photos being uploaded. 
+### 3rd Place winning web application at [WebJam Winter 2013](http://student-council.ics.uci.edu/webjam/) hosted by ICS Student Council at UC Irvine.
+### Campics is a photo sharing ruby on rails web application for students from different universities to share photos from their campus. Users are also able to experience the life of a college student on any campus through brand new photos being uploaded. 
+
+##[Check it out here!](http://campics.heroku.com)
 </p>
 <p>
 Campics is currently only available to students from the following schools: 
@@ -17,7 +17,7 @@ Campics is currently only available to students from the following schools:
 <br> UCLA
 <br> PRINCETON
 <br> HARVARD
-</p><br>
+</p>
 <h2>Authors</h2>
 <p>
 	We created Campics for the WebJam Winter 2013 hosted by ICS Student Council.
@@ -27,4 +27,3 @@ Campics is currently only available to students from the following schools:
 	<li> Christine Lew (2nd Year, CS)
 </p><br>
 
-[Campics](http://campics.herokuapp.com/)
